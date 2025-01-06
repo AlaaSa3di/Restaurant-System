@@ -13,7 +13,7 @@ function Customer(fullName, password, dob, gender, phone, orderType, orderOption
 
 function run() {
   const cardsSection = document.getElementById('customer-cards');
-  cardsSection.innerHTML = ''; // Clear existing cards
+  cardsSection.innerText = ''; 
 
   customerOrders.forEach((customer) => {
     const card = document.createElement('div');
@@ -25,6 +25,9 @@ function run() {
 
     const name = document.createElement('p');
     name.textContent = `Full Name: ${customer.fullName}`;
+
+    const password = document.createElement('p');
+    password.textContent = `Password: ${'*'.repeat(customer.password.length)}`;
 
     const dob = document.createElement('p');
     dob.textContent = `Date of Birth: ${customer.dob}`;
@@ -43,6 +46,7 @@ function run() {
 
     card.appendChild(img);
     card.appendChild(name);
+    card.appendChild(password);
     card.appendChild(dob);
     card.appendChild(gender);
     card.appendChild(phone);
