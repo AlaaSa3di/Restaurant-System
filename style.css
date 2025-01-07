@@ -106,6 +106,9 @@
   .card p {
     margin: 5px 0;
   }
+  .error{
+    color: red;
+  }
   
   footer {
     background-color: #333;
